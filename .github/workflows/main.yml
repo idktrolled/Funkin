@@ -12,7 +12,8 @@ jobs:
           haxe-version: 4.3.4
       - name: install library
         run: |
-          haxelib install hxcpp
+          haxelib setup C:/haxelib
+          haxelib install hxcpp > /dev/null
           haxelib install hxnodejs
           haxelib install lime
           haxelib install openfl
@@ -45,7 +46,8 @@ jobs:
         run: |
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
-          haxelib install hxcpp
+          haxelib setup ~/haxelib
+          haxelib install hxcpp > /dev/null
           haxelib install hxnodejs
           haxelib install lime
           haxelib install openfl
@@ -76,7 +78,8 @@ jobs:
           haxe-version: 4.3.4
       - name: install library
         run: |
-          haxelib install hxcpp
+          haxelib setup ~/haxelib
+          haxelib install hxcpp > /dev/null
           haxelib install hxnodejs
           haxelib install lime
           haxelib install openfl
